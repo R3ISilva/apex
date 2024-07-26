@@ -14,7 +14,6 @@ function App() {
 }
 
 function RealApp() {
-    const [count, setCount] = useState(0)
     return (
         <>
             <Welcome />
