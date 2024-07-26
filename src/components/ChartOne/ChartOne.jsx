@@ -1,4 +1,4 @@
-//https://mantine.dev/charts/area-chart/
+//https://mantine.dev/charts/area-chart/k
 import { AreaChart } from '@mantine/charts';
 
 function ChartOne() {
@@ -10,9 +10,9 @@ function ChartOne() {
             data={data}
             dataKey="date"
             series={[
-                { name: 'Apples', color: 'indigo.6' },
-                { name: 'Oranges', color: 'blue.6' },
-                { name: 'Tomatoes', color: 'teal.6' },
+                { name: 'first', color: 'green.3' },
+                { name: 'second', color: 'green.1' },
+                { name: 'third', color: 'red.1' },
             ]}
             curveType="linear"
         />
@@ -22,33 +22,33 @@ function ChartOne() {
 const data = [
     {
         date: 'Mar 22',
-        Apples: 2890,
-        Oranges: 2338,
-        Tomatoes: 2452,
+        first: 2890,
+        second: 2338,
+        third: 2452,
     },
     {
         date: 'Mar 23',
-        Apples: 2756,
-        Oranges: 2103,
-        Tomatoes: 2402,
+        first: 2756,
+        second: 2103,
+        third: 2402,
     },
     {
         date: 'Mar 24',
-        Apples: 3322,
-        Oranges: 986,
-        Tomatoes: 1821,
+        first: 3322,
+        second: 986,
+        third: 1821,
     },
     {
         date: 'Mar 25',
-        Apples: 3470,
-        Oranges: 2108,
-        Tomatoes: 2809,
+        first: 3470,
+        second: 2108,
+        third: 2809,
     },
     {
         date: 'Mar 26',
-        Apples: 3129,
-        Oranges: 1726,
-        Tomatoes: 2290,
+        first: 3129,
+        second: 1726,
+        third: 2290,
     },
 ];
 
