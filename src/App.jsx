@@ -1,12 +1,10 @@
-import { useState } from 'react'
-
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import '@mantine/charts/styles.css';
-import {Center, MantineProvider} from '@mantine/core';
+import {MantineProvider} from '@mantine/core';
 import {Welcome} from "./components/Welcome/Welcome.jsx";
 import {ColorSchemeToggle} from "./components/ColorSchemeToggle/ColorSchemeToggle.jsx";
-import ChartOne from "./components/ChartOne/ChartOne.jsx";
+import GridTest from "./components/GridTest/GridTest.jsx";
 
 
 function App() {
@@ -17,10 +15,8 @@ function RealApp() {
     return (
         <>
             <Welcome />
+            <GridTest />
             <ColorSchemeToggle />
-            <Center h={500}>
-                <ChartOne />
-            </Center>
         </>
     )
 }
