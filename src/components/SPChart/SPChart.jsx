@@ -48,9 +48,10 @@ function SPChart() {
                 <Space h="lg" />
                 <LineChart
                     h={200}
-                    w={900}
+                    w={800}
                     strokeWidth={2}
                     data={data}
+                    withDots={false}
                     dataKey="date"
                     yAxisProps={{ domain: getYAxisDomain(data) }}
                     unit="$"
