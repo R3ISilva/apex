@@ -1,10 +1,11 @@
 import '@mantine/core/styles.css';
 import '@mantine/dates/styles.css';
 import '@mantine/charts/styles.css';
-import {MantineProvider} from '@mantine/core';
+import {MantineProvider, Space} from '@mantine/core';
 import {Welcome} from "./components/Welcome/Welcome.jsx";
 import {ColorSchemeToggle} from "./components/ColorSchemeToggle/ColorSchemeToggle.jsx";
 import GridTest from "./components/GridTest/GridTest.jsx";
+import SPChart from "./components/SPChart/SPChart.jsx";
 
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
 function RealApp() {
     return (
         <>
-            <Welcome />
+            <Welcome/>
+            <Space h="xl"/>
+            <SPChart></SPChart>
             <GridTest />
             <ColorSchemeToggle />
         </>
