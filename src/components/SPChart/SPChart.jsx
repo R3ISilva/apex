@@ -23,10 +23,17 @@ function SPChart() {
     }
 
     function mapData(rawData) {
-        return Object.entries(rawData["Time Series (Daily)"]).map(([date, values]) => ({
+        let mappedData = Object.entries(rawData["Time Series (Daily)"]).map(([date, values]) => ({
             date: formatDate(date),
             SP: parseFloat(values["4. close"])
         })).reverse();
+
+        return removeEntriesInData(mappedData);
+    }
+
+
+    function removeEntriesInData(data) {
+        return data.filter((item, index) => index % 5 === 0);
     }
 
     function formatDate(dateString) {
@@ -42,7 +49,7 @@ function SPChart() {
                 <LineChart
                     h={200}
                     w={900}
-                    strokeWidth={1}
+                    strokeWidth={2}
                     data={data}
                     dataKey="date"
                     yAxisProps={{ domain: getYAxisDomain(data) }}
