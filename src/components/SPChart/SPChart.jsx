@@ -1,5 +1,5 @@
 import { Container, Space, Title } from "@mantine/core";
-import { LineChart } from '@mantine/charts';
+import { LineChart} from '@mantine/charts';
 import { useEffect, useState } from 'react';
 import {getSP500Data} from "../../Repository.js";
 
