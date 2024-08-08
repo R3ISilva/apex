@@ -4,8 +4,8 @@ import '@mantine/charts/styles.css';
 import {MantineProvider, Space} from '@mantine/core';
 import {Welcome} from "./components/Welcome/Welcome.jsx";
 import {ColorSchemeToggle} from "./components/ColorSchemeToggle/ColorSchemeToggle.jsx";
-import GridTest from "./components/GridTest/GridTest.jsx";
 import SPChart from "./components/SPChart/SPChart.jsx";
+import {AvailableCurrency} from "./components/AvailableCurrency/AvailableCurrency.jsx";
 
 
 function App() {
@@ -17,8 +17,8 @@ function RealApp() {
         <>
             <Welcome/>
             <Space h="xl"/>
+            <AvailableCurrency/>
             <SPChart></SPChart>
-            <GridTest />
             <ColorSchemeToggle />
         </>
     )
