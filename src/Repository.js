@@ -1,5 +1,6 @@
 //const apiKey = '09TGTA88H2SEGDJ4';
 //const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=SPY&apikey=${apiKey}`;
+import Papa from 'papaparse';
 
 export async function getSP500Data() {
     return getSP500MockData();
@@ -17,7 +18,7 @@ export async function getSP500Data() {
     // }
 }
 
-export async function getSP500MockData(){
+async function getSP500MockData(){
     return {
         "Meta Data": {
             "1. Information": "Daily Prices (open, high, low, close) and Volumes",
@@ -729,4 +730,36 @@ export async function getSP500MockData(){
             }
         }
     };
+}
+
+export async function getPurchaseHistory(){
+    return await getTransactionHistoryMockData();
+}
+
+async function getTransactionHistoryMockData() {
+    try {
+        const response = await fetch('/TransactionMockData.csv');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        // Read the response as text
+        const csvText = await response.text();
+
+        // Parse the CSV text
+        return new Promise((resolve, reject) => {
+            Papa.parse(csvText, {
+                header: true, // Treat the first row as headers
+                complete: (result) => {
+                    resolve(result.data); // Resolve with parsed data
+                },
+                error: (error) => {
+                    reject(error); // Reject on parse error
+                }
+            });
+        });
+    } catch (error) {
+        console.error('Error fetching or parsing the CSV file:', error);
+        throw error;
+    }
 }
