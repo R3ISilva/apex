@@ -25,7 +25,8 @@ function SPChart() {
     function mapData(rawData) {
         let mappedData = Object.entries(rawData["Time Series (Daily)"]).map(([date, values]) => ({
             date: formatDate(date),
-            SP: parseFloat(values["4. close"])
+            SP: parseFloat(values["4. close"]),
+            Portfolio: parseFloat(values["4. close"]) + Math.random() * 50
         })).reverse();
 
         return removeEntriesInData(mappedData);
@@ -44,7 +45,7 @@ function SPChart() {
     return (
         <>
             <Container>
-                <Title order={1} align="center">S&P</Title>
+                <Title order={1} align="center">S&P vs Portfolio</Title>
                 <Space h="lg" />
                 <LineChart
                     h={200}
@@ -55,7 +56,8 @@ function SPChart() {
                     yAxisProps={{ domain: getYAxisDomain(data) }}
                     unit="$"
                     series={[
-                        { name: 'SP', color: 'green.3' },
+                        { name: 'SP', color: 'red.3' },
+                        { name: 'Portfolio', color: 'green.3' },
                     ]}
                     curveType="natural"
                 />
