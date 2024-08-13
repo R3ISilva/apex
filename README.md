@@ -1,8 +1,12 @@
-# React + Vite
+# Planning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Problems to solve by order of importance
 
-Currently, two official plugins are available:
+1. Track ETFs portfolio separately from stocks 
+2. Track total of all portfolios and cash
+3. Add notes on stocks to not forget when im buying and why I bought price target for buying and for selling
+4. Track individual stocks
+5. VIX Tracker (volatility) to know when to have bigger cash flow
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# Features
