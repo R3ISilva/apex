@@ -1,7 +1,7 @@
 # How to run
-clone repository
-npm install
-npm run dev
+1. clone repository
+2. npm install
+3. npm run dev
 
 # Planning
 
