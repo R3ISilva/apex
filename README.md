@@ -1,3 +1,8 @@
+# How to run
+clone repository
+npm install
+npm run dev
+
 # Planning
 
 # Problems to solve by order of importance
